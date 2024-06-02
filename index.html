@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sketch</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+  </head>
+
+  <body>
+    
+    <div class="navbar">
+      <div class="navbar-left">
+          <a href="#about">About Me</a>
+          <a href="#education">Education</a>
+          <a href="#work-experience">Work Experience</a>
+      </div>
+      <div class="navbar-right">
+         
+        <a href="#" class="search-icon" id="search-icon"><i class="fas fa-search"></i></a>
+        <a href="#" class="menu-icon" id="menu-icon"><i class="fas fa-bars"></i></a>
+      </div>
+  </div>
+  <div class="sidebar" id="sidebar">
+    <a href="#" class="closebtn" id="closebtn"><i class="fas fa-times"></i></a>
+    <!-- Add any sidebar content here -->
+    <a href="#" id="music-button">Play Music</a>
+        <a href="#" id="show-text-button">Show Text</a>
+        <a href="#" id="restart-button">Restart</a>
+  </div>
+  <div class="text-container" style="display: none;"></div>
+  <script src="sketch.js"></script>
+    <script src="mold.js"></script>
+    <script src="sidebar.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var restartButton = document.getElementById('restart-button');
+  
+        restartButton.addEventListener('click', function() {
+          window.location.reload(); // Reload the page
+        });
+      });
+    </script>
+  </body>
+</html>

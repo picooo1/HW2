@@ -1,0 +1,150 @@
+@font-face{
+  font-family: 'Montserrat';
+  src:url(fonts/Montserrat-VariableFont_wght.ttf)
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.5); /* Black color with 50% opacity */
+  backdrop-filter: blur(10px); /* Apply background blur effect */
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* Align items to the start and end of the navbar */
+  align-items: left; /* Center the text vertically */
+  padding: 10px 20px; /* Add padding */
+
+}
+
+.navbar-left {
+  display: flex; /* Use flexbox for horizontal alignment */
+  flex: 1;
+  justify-content: center; /* Center align the text links horizontally */
+  align-items: center; /* Center align vertically */
+}
+
+.navbar-left a {
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  text-transform: uppercase; /* Ensure all text is capitalized */
+  margin: 0 20px; /* Add some margin between links */
+  font-weight: lighter;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.navbar-left a:hover {
+  color: rgba(255, 255, 255); /* Light gray color with 50% opacity on hover */
+  font-weight: normal;
+}
+.navbar-right {
+  display: flex; /* Use flexbox for horizontal alignment */
+  justify-content: flex-end; /* Right align the search and menu icons */
+  align-items: center; /* Center align vertically */
+  padding-right: 30px;
+}
+
+.navbar-right a {
+  text-decoration: none;
+  color: rgba(255, 255, 255,0.5);
+  font-size: 16px;
+  margin-left: 10px; /* Add some margin between icons */
+}
+
+.navbar-right a:hover {
+  color: rgba(255, 255, 255);
+ 
+}
+
+.navbar-right i {
+  text-decoration: none;
+  color: rgba(255, 255, 255,0.5);
+  font-size: 16px;
+  margin-left: 10px; /* Add some margin between icons */
+}
+
+.navbar-right i:hover {
+  color: rgba(255, 255, 255);
+  
+}
+
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 50px;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px; /* Place content 60px from the top */
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: rgba(255, 255, 255);
+  font-weight: normal;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+ right: 0;
+ padding-right: 20px;
+  font-size: 16px;
+ 
+}
+.text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  color: rgba(255, 255, 255, 1); /* Set initial opacity to 1 */
+  animation: fadeIn 5s ; /* Apply fade-in animation */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    /* Start from a smaller size */
+  }
+  100% {
+    opacity: 1;
+   /* Gradually increase size */
+  }
+}
+
+.fadeOut {
+  animation: fadeOut 2s forwards; /* Apply fade-out animation */
+}
+@keyframes fadeOut {
+  100% {
+    opacity: 1;
+    /* Start from a smaller size */
+  }
+  0% {
+    opacity: 0;
+   /* Gradually increase size */
+  }
+}
